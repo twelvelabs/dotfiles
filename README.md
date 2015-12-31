@@ -8,5 +8,5 @@ Install [rcm](https://github.com/thoughtbot/rcm):
 
 Install the dotfiles:
 
-    git clone git://github.com/twelvelabs/dotfiles.git
+    git clone git@github.com:twelvelabs/dotfiles.git
     rcup -d dotfiles -x "README.md"
