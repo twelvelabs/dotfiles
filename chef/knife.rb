@@ -6,9 +6,8 @@ repo_mode               'everything'
 versioned_cookbooks     true
 cookbook_copyright      'Vox Media, Inc'
 cookbook_email          'operations-team@voxmedia.com'
-chef_server_url         'https://chef.voxops.net'
-
-node_name               ENV['CHEF_USERNAME'] 'skip'
-chef_repo_path          ENV['CHEF_REPO_PATH'] '~/Projects/chef-berkshelf'
-client_key              ENV['CHEF_CLIENT_KEY_PATH'] '~/.secrets/chef-client.pem'
-validation_key          ENV['CHEF_VALIDATION_KEY_PATH'] '~/.secrets/chef-validator.pem'
+chef_server_url         ENV['CHEF_SERVER_URL']
+node_name               ENV['CHEF_USERNAME']
+chef_repo_path          ENV['CHEF_REPO_PATH']
+client_key              ENV['CHEF_CLIENT_KEY_PATH']
+validation_key          ENV['CHEF_VALIDATION_KEY_PATH']
