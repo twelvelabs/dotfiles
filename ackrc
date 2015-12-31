@@ -1,0 +1,10 @@
+--ignore-dir=.rbenv/
+--ignore-dir=.bundle/
+--ignore-dir=.sass-cache/
+--ignore-dir=tmp/
+--ignore-dir=log/
+--ignore-dir=public/cache/
+
+--type-add=ruby=.builder,.ru,.lock
+--type-set=erb=.erb,.rhmtl
+--type-set=scss=.scss

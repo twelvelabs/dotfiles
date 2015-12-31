@@ -1,0 +1,6 @@
+alias ls="ls -alGh"
+alias be="bundle exec"
+alias dc="docker-compose"
+alias st="git status"
+alias df="git diff | mate"
+alias dfc="git diff --cached | mate"

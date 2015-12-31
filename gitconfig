@@ -1,0 +1,16 @@
+[user]
+  name = Skip Baney
+  email = twelvelabs@gmail.com
+[branch]
+  autosetuprebase = always
+[alias]
+  st = status
+  ci = commit
+  br = branch
+  co = checkout
+  df = diff
+  dc = diff --cached
+[push]
+  default = simple
+[core]
+  excludesfile = ~/.gitignore
