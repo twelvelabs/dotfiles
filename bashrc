@@ -13,6 +13,8 @@ export RUBYOPT="-W0"
 # export SSL_CERT_FILE=/usr/local/etc/openssl/certs/cert.pem
 # export CHEF_REPO_PATH=~/Projects/chef-berkshelf
 
+[[ -f /usr/local/etc/bash_completion ]] && source /usr/local/etc/bash_completion
+
 [[ -x /usr/local/bin/rbenv ]] && eval "$(rbenv init -)"
 #[[ -x /usr/local/bin/docker-machine ]] && eval "$(docker-machine env default)"
 
