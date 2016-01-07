@@ -17,7 +17,7 @@ export TERM_CHILD=1
 [[ -f /usr/local/etc/bash_completion ]] && source /usr/local/etc/bash_completion
 
 [[ -x /usr/local/bin/rbenv ]] && eval "$(rbenv init -)"
-#[[ -x /usr/local/bin/docker-machine ]] && eval "$(docker-machine env default)"
+[[ -x /usr/local/bin/docker-machine ]] && eval "$(docker-machine env default)"
 
 # local config
 [[ -f ~/.bashrc.local ]] && source ~/.bashrc.local
