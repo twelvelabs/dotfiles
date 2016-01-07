@@ -1,3 +1,7 @@
+--smart-case
+--sort-files
+--color
+
 --ignore-dir=.rbenv/
 --ignore-dir=.bundle/
 --ignore-dir=.sass-cache/
@@ -8,3 +12,5 @@
 --type-add=ruby=.builder,.ru,.lock
 --type-set=erb=.erb,.rhmtl
 --type-set=scss=.scss
+--type-set=json=.json
+--type-add=js=.json

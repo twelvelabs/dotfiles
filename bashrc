@@ -9,6 +9,7 @@ export EDITOR='mate -w'
 export PS1="[\u@\h:\w] $ "
 export PATH="/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 export RUBYOPT="-W0"
+export TERM_CHILD=1
 
 # export SSL_CERT_FILE=/usr/local/etc/openssl/certs/cert.pem
 # export CHEF_REPO_PATH=~/Projects/chef-berkshelf
