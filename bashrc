@@ -7,7 +7,8 @@
 export ARCHFLAGS="-arch x86_64"
 export EDITOR='mate -w'
 export PS1="[\u@\h:\w] $ "
-export PATH="/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+export GOPATH="$HOME/Projects/golang"
+export PATH="$GOPATH/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 export RUBYOPT="-W0"
 export TERM_CHILD=1
 
