@@ -1,0 +1,26 @@
+AllCops:
+  TargetRubyVersion: 2.2
+
+Metrics/LineLength:
+  Max: 150
+
+Lint/UnusedBlockArgument:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/EmptyLinesAroundBlockBody:
+  Enabled: false
+
+Style/EmptyLinesAroundClassBody:
+  Enabled: false
+
+Style/EmptyLinesAroundModuleBody:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
