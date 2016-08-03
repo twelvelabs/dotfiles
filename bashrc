@@ -21,7 +21,6 @@ export NVM_DIR="$HOME/.nvm"
 [[ -f /usr/local/opt/nvm/nvm.sh ]] && source /usr/local/opt/nvm/nvm.sh
 
 [[ -x /usr/local/bin/rbenv ]] && eval "$(rbenv init -)"
-[[ -x /usr/local/bin/docker-machine ]] && eval "$(docker-machine env default)"
 
 # local config
 [[ -f ~/.bashrc.local ]] && source ~/.bashrc.local
