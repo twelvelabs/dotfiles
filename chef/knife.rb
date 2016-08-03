@@ -11,3 +11,5 @@ node_name               ENV['CHEF_USERNAME']
 chef_repo_path          ENV['CHEF_REPO_PATH']
 client_key              ENV['CHEF_CLIENT_KEY_PATH']
 validation_key          ENV['CHEF_VALIDATION_KEY_PATH']
+
+#knife[:secret_file] = ENV['CHEF_SECRET_FILE_PATH']
