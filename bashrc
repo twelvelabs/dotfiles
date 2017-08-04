@@ -11,14 +11,15 @@ export GOPATH="$HOME/Projects/golang"
 export PATH="$GOPATH/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 export RUBYOPT="-W0"
 export TERM_CHILD=1
-
 export NVM_DIR="$HOME/.nvm"
 
 # export SSL_CERT_FILE=/usr/local/etc/openssl/certs/cert.pem
 # export CHEF_REPO_PATH=~/Projects/chef-berkshelf
 
 [[ -f /usr/local/etc/bash_completion ]] && source /usr/local/etc/bash_completion
-[[ -f /usr/local/opt/nvm/nvm.sh ]] && source /usr/local/opt/nvm/nvm.sh
+[[ -f "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
+[[ -f "$NVM_DIR/bash_completion" ]] && source "$NVM_DIR/bash_completion"
+[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh"
 
 [[ -x /usr/local/bin/rbenv ]] && eval "$(rbenv init -)"
 [[ -x /usr/local/bin/hub ]] && eval "$(hub alias -s)"
