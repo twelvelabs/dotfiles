@@ -19,7 +19,6 @@ export NVM_DIR="$HOME/.nvm"
 [[ -f /usr/local/etc/bash_completion ]] && source /usr/local/etc/bash_completion
 [[ -f "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
 [[ -f "$NVM_DIR/bash_completion" ]] && source "$NVM_DIR/bash_completion"
-[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh"
 
 [[ -x /usr/local/bin/rbenv ]] && eval "$(rbenv init -)"
 [[ -x /usr/local/bin/hub ]] && eval "$(hub alias -s)"
