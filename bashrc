@@ -25,3 +25,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # local config
 [[ -f ~/.bashrc.local ]] && source ~/.bashrc.local
+
+# added by travis gem
+[ -f /Users/sbaney/.travis/travis.sh ] && source /Users/sbaney/.travis/travis.sh
