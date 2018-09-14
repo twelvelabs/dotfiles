@@ -20,6 +20,7 @@ export NVM_DIR="$HOME/.nvm"
 [[ -f "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
 [[ -f "$NVM_DIR/bash_completion" ]] && source "$NVM_DIR/bash_completion"
 
+[[ -x /usr/local/bin/pyenv ]] && eval "$(pyenv init -)"
 [[ -x /usr/local/bin/rbenv ]] && eval "$(rbenv init -)"
 [[ -x /usr/local/bin/hub ]] && eval "$(hub alias -s)"
 
