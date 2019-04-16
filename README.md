@@ -1,12 +1,13 @@
 Install
 -------
 
-Install [rcm](https://github.com/thoughtbot/rcm):
+Install homebrew:
 
-    brew tap thoughtbot/formulae
-    brew install rcm
+    open https://brew.sh
 
 Install the dotfiles:
 
     git clone git@github.com:twelvelabs/dotfiles.git
-    rcup -d dotfiles -x "README.md"
+    cd dotfiles
+    brew bundle install
+    rcup -x "README.md"

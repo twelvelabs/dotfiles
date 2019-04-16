@@ -1,7 +1,7 @@
 [user]
   name = Skip Baney
   email = twelvelabs@gmail.com
-	signingkey = A00BB96DEA4162CD
+#  signingkey = A00BB96DEA4162CD
 [branch]
   autosetuprebase = always
 [alias]
@@ -15,5 +15,5 @@
   default = simple
 [core]
   excludesfile = ~/.gitignore
-[commit]
-	gpgsign = true
+#[commit]
+#  gpgsign = true
