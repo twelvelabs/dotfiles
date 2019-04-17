@@ -5,7 +5,7 @@
 
 export EDITOR='code --wait'
 export PS1="[\u@\h:\w] $ "
-export GOPATH="/usr/local/go"
+export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 
