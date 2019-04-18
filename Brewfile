@@ -12,6 +12,7 @@ brew "kubernetes-helm"
 brew "rcm"
 brew "ripgrep"
 brew "sops"
+brew "tree"
 brew "ykman"
 brew "yq"
 
