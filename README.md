@@ -7,7 +7,7 @@ Install homebrew:
 
 Install the dotfiles:
 
-    git clone git@github.com:twelvelabs/dotfiles.git
-    cd dotfiles
+    git clone git@github.com:twelvelabs/dotfiles.git .dotfiles
+    cd .dotfiles
     brew bundle install
-    rcup -x "README.md"
+    rcup -x "README.md Brewfile"
