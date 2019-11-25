@@ -11,6 +11,7 @@
   co = checkout
   df = diff
   dc = diff --cached
+  rp = remote prune origin
 [push]
   default = simple
 [core]
