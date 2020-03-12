@@ -20,3 +20,7 @@
 #  gpgsign = true
 [format]
 	pretty = oneline
+[diff]
+    tool = vscode
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE
