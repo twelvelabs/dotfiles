@@ -3,6 +3,14 @@
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
+# `brew shellenv` outputs the following:
+#
+# export HOMEBREW_PREFIX="/opt/homebrew";
+# export HOMEBREW_CELLAR="/opt/homebrew/Cellar";
+# export HOMEBREW_REPOSITORY="/opt/homebrew";
+# export PATH="/opt/homebrew/bin:/opt/homebrew/sbin${PATH+:$PATH}";
+# export MANPATH="/opt/homebrew/share/man${MANPATH+:$MANPATH}:";
+# export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
@@ -25,14 +33,12 @@ function historymerge {
 trap historymerge EXIT
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
-[[ -f /usr/local/etc/bash_completion ]] && source /usr/local/etc/bash_completion
+[[ -f ${HOMEBREW_PREFIX}/etc/bash_completion ]] && source ${HOMEBREW_PREFIX}/etc/bash_completion
 [[ -f "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
 [[ -f "$NVM_DIR/bash_completion" ]] && source "$NVM_DIR/bash_completion"
-complete -C aws_completer aws
 
-[[ -x /usr/local/bin/pyenv ]] && eval "$(pyenv init -)"
-[[ -x /usr/local/bin/pyenv ]] && eval "$(pyenv virtualenv-init -)"
-[[ -x /usr/local/bin/rbenv ]] && eval "$(rbenv init -)"
+[[ -x ${HOMEBREW_PREFIX}/bin/pyenv ]] && eval "$(pyenv init -)"
+[[ -x ${HOMEBREW_PREFIX}/bin/rbenv ]] && eval "$(rbenv init -)"
 
 # local config
 [[ -f ~/.bashrc.local ]] && source ~/.bashrc.local
