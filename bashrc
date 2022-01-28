@@ -37,7 +37,12 @@ PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 [[ -f "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
 [[ -f "$NVM_DIR/bash_completion" ]] && source "$NVM_DIR/bash_completion"
 
-[[ -x ${HOMEBREW_PREFIX}/bin/pyenv ]] && eval "$(pyenv init -)"
+if [[ -x ${HOMEBREW_PREFIX}/bin/pyenv ]]; then
+    export PYENV_ROOT="$HOME/.pyenv"
+    export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init --path)"
+    eval "$(pyenv init -)"
+fi
 [[ -x ${HOMEBREW_PREFIX}/bin/rbenv ]] && eval "$(rbenv init -)"
 
 # local config
