@@ -3,13 +3,14 @@
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+export BASH_SILENCE_DEPRECATION_WARNING=1
 export EDITOR='code --wait'
 export PS1="[\u@\h:\w] $ "
 export GOPATH="$HOME/go"
-export PATH="$GOPATH/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 export NVM_DIR="$HOME/.nvm"
-
-export OKTA_USERNAME="skip.baney"
+export PATH="$GOPATH/bin:$PATH"
 
 export HISTIGNORE="history*:exit"
 export HISTSIZE=5000
@@ -32,7 +33,6 @@ complete -C aws_completer aws
 [[ -x /usr/local/bin/pyenv ]] && eval "$(pyenv init -)"
 [[ -x /usr/local/bin/pyenv ]] && eval "$(pyenv virtualenv-init -)"
 [[ -x /usr/local/bin/rbenv ]] && eval "$(rbenv init -)"
-[[ -x /usr/local/bin/hub ]] && eval "$(hub alias -s)"
 
 # local config
 [[ -f ~/.bashrc.local ]] && source ~/.bashrc.local

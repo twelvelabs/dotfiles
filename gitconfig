@@ -19,8 +19,8 @@
 #[commit]
 #  gpgsign = true
 [format]
-	pretty = oneline
+  pretty = oneline
 [diff]
-    tool = vscode
+  tool = vscode
 [difftool "vscode"]
-    cmd = code --wait --diff $LOCAL $REMOTE
+  cmd = code --wait --diff $LOCAL $REMOTE
