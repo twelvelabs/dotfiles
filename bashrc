@@ -14,6 +14,7 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
+export CLICOLOR=1
 export EDITOR='code --wait'
 export PS1="[\u@\h:\w] $ "
 export GOPATH="$HOME/go"
