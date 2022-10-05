@@ -1,7 +1,7 @@
 [user]
   name = Skip Baney
   email = twelvelabs@gmail.com
-#  signingkey = A00BB96DEA4162CD
+	signingKey = /Users/sbaney/.ssh/id_ed25519_sk
 [branch]
   autosetuprebase = always
 [alias]
@@ -16,11 +16,19 @@
   default = simple
 [core]
   excludesfile = ~/.gitignore
-#[commit]
-#  gpgsign = true
 [format]
   pretty = oneline
 [diff]
   tool = vscode
 [difftool "vscode"]
   cmd = code --wait --diff $LOCAL $REMOTE
+[init]
+	defaultBranch = main
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
+[gpg "ssh"]
+	allowedSignersFile = /Users/sbaney/.ssh/allowed_signers

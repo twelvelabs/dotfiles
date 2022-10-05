@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # secrets
 [[ -f ~/.secrets/bash.sh ]] && source ~/.secrets/bash.sh
 # aliases
@@ -18,8 +20,8 @@ export CLICOLOR=1
 export EDITOR='code --wait'
 export PS1="[\u@\h:\w] $ "
 export GOPATH="$HOME/go"
-export NVM_DIR="$HOME/.nvm"
 export PATH="$GOPATH/bin:$PATH"
+export SSH_AUTH_SOCK="$HOME/.ssh/agent"
 
 export HISTIGNORE="history*:exit"
 export HISTSIZE=5000
@@ -34,17 +36,14 @@ function historymerge {
 trap historymerge EXIT
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
-[[ -f ${HOMEBREW_PREFIX}/etc/bash_completion ]] && source ${HOMEBREW_PREFIX}/etc/bash_completion
-[[ -f "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
-[[ -f "$NVM_DIR/bash_completion" ]] && source "$NVM_DIR/bash_completion"
+[[ -f "/opt/homebrew/etc/bash_completion" ]] && source "/opt/homebrew/etc/bash_completion"
 
-if [[ -x ${HOMEBREW_PREFIX}/bin/pyenv ]]; then
+if [[ -x "/opt/homebrew/bin/pyenv" ]]; then
     export PYENV_ROOT="$HOME/.pyenv"
     export PATH="$PYENV_ROOT/bin:$PATH"
     eval "$(pyenv init --path)"
     eval "$(pyenv init -)"
 fi
-[[ -x ${HOMEBREW_PREFIX}/bin/rbenv ]] && eval "$(rbenv init -)"
 
 # local config
 [[ -f ~/.bashrc.local ]] && source ~/.bashrc.local
