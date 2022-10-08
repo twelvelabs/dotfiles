@@ -21,7 +21,6 @@ export EDITOR='code --wait'
 export PS1="[\u@\h:\w] $ "
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
-export SSH_AUTH_SOCK="$HOME/.ssh/agent"
 
 export HISTIGNORE="history*:exit"
 export HISTSIZE=5000

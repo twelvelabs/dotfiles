@@ -4,7 +4,7 @@
 
 * Login to iCloud
 * Login to App Store
-    * Download 1Password and login
+  * Download 1Password and login
 * Download [VS Code](https://code.visualstudio.com)
 * Login to [GitHub](https://github.com)
 * Setup SSH:
@@ -30,6 +30,8 @@ ssh-add -K ~/.ssh/id_ed25519
 pbcopy < ~/.ssh/id_ed25519.pub
 open https://github.com/settings/keys
 ```
+
+* TODO: document YubiKey SSH setup
 
 * Setup Homebrew:
 
