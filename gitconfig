@@ -1,7 +1,7 @@
 [user]
   name = Skip Baney
   email = twelvelabs@gmail.com
-	signingKey = /Users/sbaney/.ssh/id_ed25519_sk
+	signingKey = ~/.ssh/id_ed25519_sk
 [branch]
   autosetuprebase = always
 [alias]
@@ -31,4 +31,4 @@
 [tag]
 	gpgsign = true
 [gpg "ssh"]
-	allowedSignersFile = /Users/sbaney/.ssh/allowed_signers
+	allowedSignersFile = ~/.ssh/allowed_signers
