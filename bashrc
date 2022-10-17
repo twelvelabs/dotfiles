@@ -21,6 +21,7 @@ export EDITOR='code --wait'
 export PS1="[\u@\h:\w] $ "
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
+export SOPS_AGE_KEY_FILE="~/.sops/sops-age-key.txt"
 
 export HISTIGNORE="history*:exit"
 export HISTSIZE=5000
@@ -30,7 +31,10 @@ shopt -s histappend
 # Merge history when closing terminal windows
 # Via: https://unix.stackexchange.com/a/556267
 function historymerge {
-    history -n; history -w; history -c; history -r;
+    history -n
+    history -w
+    history -c
+    history -r
 }
 trap historymerge EXIT
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
