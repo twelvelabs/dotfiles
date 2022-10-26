@@ -1,34 +1,39 @@
-[user]
-  name = Skip Baney
-  email = twelvelabs@gmail.com
-  signingKey = ~/.ssh/id_ed25519_sk.pub
-[branch]
-  autosetuprebase = always
 [alias]
-  st = status
-  ci = commit
-  br = branch
-  co = checkout
-  df = diff
-  dc = diff --cached
-  rp = remote prune origin
-[push]
-  default = simple
-[core]
-  excludesfile = ~/.gitignore
-[format]
-  pretty = oneline
-[diff]
-  tool = vscode
-[difftool "vscode"]
-  cmd = code --wait --diff $LOCAL $REMOTE
-[init]
-	defaultBranch = main
-[gpg]
-	format = ssh
+	st = status
+	ci = commit
+	co = checkout
+	df = diff
+	dc = diff --cached
+[branch]
+	autosetuprebase = always
 [commit]
 	gpgsign = true
-[tag]
-	gpgsign = true
+[core]
+	excludesfile = ~/.gitignore
+	editor = code --wait --new-window
+[diff]
+	tool = vscode
+[difftool "vscode"]
+	cmd = code --wait --diff --new-window $LOCAL $REMOTE
+[fetch]
+	prune = true
+[format]
+	pretty = oneline
+[gpg]
+	format = ssh
 [gpg "ssh"]
 	allowedSignersFile = ~/.ssh/allowed_signers
+[init]
+	defaultBranch = main
+[merge]
+	tool = vscode
+[mergetool "vscode"]
+	cmd = code --wait --new-window $MERGED
+[push]
+	default = simple
+[tag]
+	gpgsign = true
+[user]
+	name = Skip Baney
+	email = twelvelabs@gmail.com
+	signingKey = ~/.ssh/id_ed25519_sk.pub
