@@ -6,11 +6,15 @@
 	dc = diff --cached
 [branch]
 	autosetuprebase = always
+[checkout]
+	defaultRemote = origin
 [commit]
 	gpgsign = true
 [core]
 	excludesfile = ~/.gitignore
 	editor = code --wait --new-window
+[credential]
+	helper = osxkeychain
 [diff]
 	tool = vscode
 [difftool "vscode"]
@@ -25,11 +29,14 @@
 	allowedSignersFile = ~/.ssh/allowed_signers
 [init]
 	defaultBranch = main
+[log]
+	abbrevCommit = true
 [merge]
 	tool = vscode
 [mergetool "vscode"]
 	cmd = code --wait --new-window $MERGED
 [push]
+	autoSetupRemote = true
 	default = simple
 [tag]
 	gpgsign = true
