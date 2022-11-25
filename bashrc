@@ -20,7 +20,7 @@ export CLICOLOR=1
 export EDITOR='code --wait'
 export PS1="[\u@\h:\w] $ "
 export GOPATH="$HOME/go"
-export PATH="$GOPATH/bin:$PATH"
+export PATH="$GOPATH/bin:$HOME/bin:$PATH"
 export SOPS_AGE_KEY_FILE="~/.sops/sops-age-key.txt"
 
 export HISTIGNORE="history*:exit"
