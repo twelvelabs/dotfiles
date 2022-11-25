@@ -37,3 +37,9 @@
 	name = Skip Baney
 	email = twelvelabs@gmail.com
 	signingKey = ~/.ssh/id_ed25519_sk.pub
+
+[url "git@github-guideline:guideline-app"]
+	insteadOf = git@github.com:guideline-app
+
+[includeIf "gitdir:~/src/guideline-app/**"]
+	path = ~/src/guideline-app/.gitconfig

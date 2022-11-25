@@ -53,3 +53,4 @@ fi
 
 # added by travis gem
 [ -f /Users/sbaney/.travis/travis.sh ] && source /Users/sbaney/.travis/travis.sh
+source ~/.glrc
