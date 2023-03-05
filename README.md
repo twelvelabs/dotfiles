@@ -48,5 +48,6 @@ open https://brew.sh
 ```bash
 git clone git@github.com:twelvelabs/dotfiles.git .dotfiles
 cd .dotfiles
-make install
+
+./install.sh
 ```
