@@ -6,6 +6,7 @@ brew 'ack'
 brew 'age'
 brew 'age-plugin-yubikey'
 brew 'bash-completion'
+brew 'duti'
 brew 'git'
 brew 'gh'
 brew 'go'
@@ -15,6 +16,7 @@ brew 'hadolint'
 brew 'httpie'
 brew 'jq'
 brew 'libfido2'
+brew 'mas'
 brew 'openssh'
 brew 'pyenv'
 brew 'rcm'
@@ -33,3 +35,11 @@ cask 'google-cloud-sdk'
 cask 'ngrok'
 cask 'postico'
 cask 'qlmarkdown'
+cask 'spotify'
+cask 'visual-studio-code'
+cask 'zoom'
+
+mas "BetterJSON",   id: 1511935951
+mas "1Password 7",  id: 1333542190
+mas "Sequel Ace",   id: 1518036000
+mas "Slack",        id: 803453959
