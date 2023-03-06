@@ -92,8 +92,9 @@ defaults write NSGlobalDomain AppleLocale -string "en_US"
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Inches"
 defaults write NSGlobalDomain AppleMetricUnits -bool false
 
-# Set the timezone
-sudo ln -sf /usr/share/zoneinfo/America/Chicago /etc/localtime
+# Set time and timezone automatically
+sudo defaults write /Library/Preferences/com.apple.timezone.auto Active -bool true
+sudo systemsetup -setusingnetworktime on &>/dev/null
 
 ###############################################################################
 # Screen                                                                      #
