@@ -1,4 +1,4 @@
-alias ls="ls -alGh"
+alias ls="ls -alhp --color=auto"
 alias be="bundle exec"
 alias dc="docker-compose"
 alias st="git status"

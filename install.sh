@@ -6,6 +6,6 @@ set -o errexit -o errtrace -o nounset -o pipefail
 
 # Install dotfiles
 echo "[install] Installing dotfiles."
-RCRC="./rcm/rcrc" rcup -v
+RCRC="./rcm/rcrc" rcup -v -f
 
 echo "[install] Done 🎉"
