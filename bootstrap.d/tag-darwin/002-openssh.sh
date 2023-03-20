@@ -22,6 +22,9 @@ if [[ ! -f ~/Library/LaunchAgents/com.twelvelabs.ssh_agent.plist ]]; then
     cp bootstrap.d/tag-darwin/LaunchAgents/com.twelvelabs.ssh_agent.plist \
         ~/Library/LaunchAgents/com.twelvelabs.ssh_agent.plist
     launchctl load -w ~/Library/LaunchAgents/com.twelvelabs.ssh_agent.plist
+else
+    launchctl stop com.twelvelabs.ssh_agent
+    launchctl start com.twelvelabs.ssh_agent
 fi
 # Aaaaannd it turns out any app that launches on startup (cough... Docker for Mac... cough)
 # will be referencing the $SSH_AUTH_SOCK from the default ssh-agent, and setting $SSH_AUTH_SOCK
@@ -34,4 +37,7 @@ if [[ ! -f ~/Library/LaunchAgents/com.twelvelabs.ssh_auth_sock.plist ]]; then
     cp bootstrap.d/tag-darwin/LaunchAgents/com.twelvelabs.ssh_auth_sock.plist \
         ~/Library/LaunchAgents/com.twelvelabs.ssh_auth_sock.plist
     launchctl load -w ~/Library/LaunchAgents/com.twelvelabs.ssh_auth_sock.plist
+else
+    launchctl stop com.twelvelabs.ssh_auth_sock
+    launchctl start com.twelvelabs.ssh_auth_sock
 fi
