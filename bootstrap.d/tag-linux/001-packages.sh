@@ -11,7 +11,7 @@ dependencies=(
     "rcm"
 )
 for dependency in "${dependencies[@]}"; do
-    if command -v "${dependency}" >/dev/null 2>&1; then
+    if dpkg -l "${dependency}" &>/dev/null; then
         log "Found dependency: ${dependency}"
     else
         if [[ "${updated}" != "true" ]]; then
