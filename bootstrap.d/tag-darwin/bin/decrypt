@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -o errexit -o errtrace -o nounset -o pipefail
+
+src="${1:-}"
+if [[ "${src}" == "" ]]; then
+    src=$(gum file --file --all)
+fi
+dst="${2:-}"
+if [[ "${dst}" == "" ]]; then
+    dst=$(basename "${src}" ".age")
+fi
+
+age --decrypt \
+    --identity ~/.age/yubikey-identity.txt \
+    "${src}" >"${dst}"

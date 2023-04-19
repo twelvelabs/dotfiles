@@ -2,6 +2,7 @@
 # shellcheck source=/dev/null
 
 [[ -f ~/.aliases ]] && source ~/.aliases
+[[ -f ~/.secrets ]] && source ~/.secrets
 
 # `brew shellenv` outputs the following:
 # export HOMEBREW_PREFIX="/opt/homebrew";
@@ -20,7 +21,7 @@ elif command -v nano &>/dev/null; then
     export EDITOR="nano"
 fi
 
-if [[ "${APP_ENV}" != "" ]]; then
+if [[ "${APP_ENV:-}" != "" ]]; then
     # "user@host(env):dir $ "
     export PS1="\[\033[01;32m\]\u@\h(\$APP_ENV)\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \$ "
 else

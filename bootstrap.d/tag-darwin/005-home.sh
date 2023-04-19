@@ -17,3 +17,5 @@ chmod 700 \
     ~/bin \
     ~/go \
     ~/src
+
+cp bootstrap.d/tag-darwin/bin/* ~/bin/
