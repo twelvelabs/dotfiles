@@ -30,16 +30,14 @@ else
 fi
 export TERM=xterm-256color
 export CLICOLOR=1
+export MANPAGER="/usr/bin/less -R --use-color -Dd+c -Du+y"
 
 if command -v dircolors &>/dev/null; then
     # Set LS_COLORS for `tree`
     eval "$(dircolors -b)"
 fi
 
-export BASH_SILENCE_DEPRECATION_WARNING=1
-
 export GOPATH="$HOME/go"
-
 if [[ -d /usr/local/go/bin ]]; then
     # Go install dir (Linux).
     export PATH="$PATH:/usr/local/go/bin"
@@ -47,6 +45,8 @@ fi
 export PATH="$PATH:$HOME/bin:$GOPATH/bin"
 
 if [[ "$(uname -s)" == "Darwin" ]]; then
+    export BASH_SILENCE_DEPRECATION_WARNING=1
+
     export HISTIGNORE="history*:exit"
     export HISTSIZE=5000
     export HISTFILESIZE=5000
