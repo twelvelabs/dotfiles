@@ -50,3 +50,6 @@
 
 [includeIf "gitdir:~/src/guideline-app/**"]
 	path = ~/src/guideline-app/.gitconfig
+
+[includeIf "gitdir:~/src/heb/**"]
+	path = ~/src/heb/.gitconfig
