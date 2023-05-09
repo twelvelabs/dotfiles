@@ -17,34 +17,28 @@ log "Preparing to update..."
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
 
-# Ask for the administrator password upfront
-sudo -v
-
-# Determine the hostname and store it in `.hostname`
-# so we don't have to prompt on subsequent runs.
-if [[ ! -f .hostname ]]; then
-    hostname=$(gum input --header "Select a hostname for this computer:" | xargs)
-    if [[ "${hostname}" != "" ]]; then
-        echo "${hostname}" >.hostname
-    else
-        log "Hostname is required!"
-        exit 1
-    fi
-else
-    hostname=$(cat .hostname)
-fi
-
 ###############################################################################
 # General UI/UX                                                               #
 ###############################################################################
 
 log "General UI/UX."
 
+# Determine the hostname and store it in `.hostname`
+# so we don't have to prompt on subsequent runs.
+if [[ -f .hostname ]]; then
+    hostname=$(cat .hostname)
+else
+    hostname=$(gum input --header "Select a hostname for this computer:" | xargs)
+    echo "${hostname}" >.hostname
+fi
+
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "${hostname}"
-sudo scutil --set HostName "${hostname}"
-sudo scutil --set LocalHostName "${hostname}"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "${hostname}"
+if [[ "${hostname}" != "" ]]; then
+    sudo scutil --set ComputerName "${hostname}"
+    sudo scutil --set HostName "${hostname}"
+    sudo scutil --set LocalHostName "${hostname}"
+    sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "${hostname}"
+fi
 
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
@@ -91,10 +85,6 @@ defaults write NSGlobalDomain AppleLanguages -array "en-US"
 defaults write NSGlobalDomain AppleLocale -string "en_US"
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Inches"
 defaults write NSGlobalDomain AppleMetricUnits -bool false
-
-# Set time and timezone automatically
-sudo defaults write /Library/Preferences/com.apple.timezone.auto Active -bool true
-sudo systemsetup -setusingnetworktime on &>/dev/null
 
 ###############################################################################
 # Screen                                                                      #
@@ -169,9 +159,6 @@ defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 
 # Show the ~/Library folder
 chflags nohidden ~/Library
-
-# Show the /Volumes folder
-sudo chflags nohidden /Volumes
 
 # Expand the following File Info panes:
 # “General”, “Open with”, and “Sharing & Permissions”
