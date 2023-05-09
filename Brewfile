@@ -9,6 +9,7 @@ brew 'bash-completion'
 brew 'duti'
 brew 'git'
 brew 'gh'
+brew 'gnupg'
 brew 'go'
 brew 'golangci-lint'
 brew 'grpcurl'
@@ -46,4 +47,4 @@ cask 'visual-studio-code'
 mas "BetterJSON",           id: 1511935951
 mas "1Password for Safari", id: 1569813296
 mas "Sequel Ace",           id: 1518036000
-mas "Slack",                id: 803453959
+# mas "Slack",                id: 803453959
