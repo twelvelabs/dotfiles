@@ -18,8 +18,10 @@ if command -v brew &>/dev/null; then
 else
     log "Installing homebrew."
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
+
+# Ensure brew is setup
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 log "Brew update."
 brew update
