@@ -34,4 +34,4 @@ else
 fi
 
 log "Brew bundle install."
-brew bundle install
+brew bundle install --no-lock
