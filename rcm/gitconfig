@@ -26,7 +26,7 @@
 [gpg]
 	format = ssh
 [gpg "ssh"]
-	allowedSignersFile = ~/.ssh/allowed_signers
+	allowedSignersFile = ~/.gitsigners
 [init]
 	defaultBranch = main
 [log]
@@ -43,13 +43,9 @@
 [user]
 	name = Skip Baney
 	email = twelvelabs@gmail.com
-	signingKey = ~/.ssh/id_ed25519_sk.pub
+	signingKey = key::sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAIPbXmLmYNazdpAc23KPitk+1bDmCaAzD6d94/nqPi6YOAAAACnNzaDpnaXRodWI=
 
-[url "git@github-guideline:guideline-app"]
-	insteadOf = git@github.com:guideline-app
-
-[includeIf "gitdir:~/src/guideline-app/**"]
-	path = ~/src/guideline-app/.gitconfig
-
-[includeIf "gitdir:~/src/heb/**"]
-	path = ~/src/heb/.gitconfig
+[includeIf "hasconfig:remote.*.url:git@gitlab.com:heb-engineering/**"]
+	path = ~/.gitconfig-heb
+[includeIf "hasconfig:remote.*.url:https://gitlab.com/heb-engineering/**"]
+	path = ~/.gitconfig-heb
