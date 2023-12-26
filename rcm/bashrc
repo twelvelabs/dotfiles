@@ -44,6 +44,10 @@ if [[ -d /usr/local/go/bin ]]; then
 fi
 export PATH="$PATH:$HOME/bin:$GOPATH/bin"
 
+if [[ -d /opt/homebrew/share/google-cloud-sdk/bin ]]; then
+    export PATH="/opt/homebrew/share/google-cloud-sdk/bin:$PATH"
+fi
+
 if [[ "$(uname -s)" == "Darwin" ]]; then
     export BASH_SILENCE_DEPRECATION_WARNING=1
 
